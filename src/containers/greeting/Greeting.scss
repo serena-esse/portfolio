@@ -1,0 +1,106 @@
+@import "../../_globalColor";
+
+.main {
+  width: 90%;
+  padding: 20px 10px;
+  margin: 0px auto;
+  margin-top: 4rem;
+}
+.greet-main {
+  width: 90%;
+  padding: 20px 10px;
+  margin: 0px auto;
+  margin-top: 2rem;
+}
+
+.greeting-main {
+  display: flex;
+}
+
+.subTitle {
+  color: $subTitle !important;
+}
+
+.greeting-main {
+  display: flex;
+}
+
+.greeting-main > * {
+  flex: 1;
+  margin-bottom: 30px;
+}
+.button-greeting-div {
+  display: flex;
+  margin-top: 20px;
+}
+
+.greeting-text {
+  font-size: 40px;
+  line-height: 1.1;
+  color: $textColor !important;
+}
+
+.greeting-text-p {
+  font-size: 30px;
+  line-height: 40px;
+}
+
+.greeting-image-div {
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  display: flex; /* Ensure flexbox is active */
+
+  img {
+    max-width: 100%; /* Image doesn't exceed container width */
+    height: auto; /* Maintain aspect ratio */
+  }
+}
+
+.wave-emoji {
+  animation-duration: 1.8s;
+  animation-iteration-count: infinite;
+  animation-name: wave;
+  display: inline-block;
+  transform-origin: 70% 70%;
+}
+
+/* Media Query */
+@media (max-width: 1380px) {
+  .greeting-text {
+    font-size: 50px;
+  }
+  .greeting-text-p {
+    font-size: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .button-greeting-div {
+    justify-content: space-around;
+  }
+  .greeting-text {
+    font-size: 30px;
+    text-align: center;
+  }
+  .greeting-text-p {
+    font-size: 16px;
+    line-height: normal;
+    text-align: center;
+  }
+  .greeting-main {
+    display: block;
+  }
+
+  .greeting-main {
+    flex-direction: column; /* Stack elements vertically */
+  }
+  .greeting-image-div {
+    justify-content: center; /* Center image horizontally */
+    align-items: center; /* Center image vertically */
+  }
+}
+
+@media (max-width: 320px) {
+  .main {
+    width: auto;
+  }
+}
