@@ -41,7 +41,7 @@ const GithubRepoCard = ({ repo, isDark, imageUrl, videoUrl }) => {
       <div className="repo-card-content">
         <h2>{repo.node.name}</h2>
         <p>{repo.node.description}</p>
-        <a href={repo.node.url} target="_blank" rel="noopener noreferrer">
+        <a href={repo.node.url} target="_blank" rel="noopener noreferrer" className="repo-link">
           View Repository
         </a>
       </div>

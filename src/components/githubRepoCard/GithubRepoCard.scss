@@ -107,10 +107,18 @@
   border-radius: 8px;
   margin-bottom: 10px;
 }
+.repo-link {
+  color: #6600ff; /* Colore del testo del link */
+  text-decoration: none; /* Rimuove la sottolineatura standard del link */
+  font-weight: bold; /* Testo in grassetto per dare maggiore enfasi */
+  // border: 2px solid #6600ff; /* Bordo del link */
+  padding: 4px 8px; /* Spaziatura interna per dare l'aspetto di un pulsante */
+  border-radius: 5px; /* Arrotonda gli angoli */
+  transition: all 0.3s ease; /* Aggiunge una transizione per rendere gli effetti di hover più fluidi */
+}
 
-.repo-card-image {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  margin-bottom: 10px;
+.repo-link:hover {
+  background-color: #6600ff; /* Cambia il colore di sfondo all'hover */
+  color: white; /* Cambia il colore del testo all'hover */
+  text-decoration: none; /* Mantiene la decorazione del testo anche su hover */
 }

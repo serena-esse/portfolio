@@ -1,7 +1,43 @@
 .experience-cards-div {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
-  gap: 1rem 1rem;
+  grid-template-columns: 1fr; /* Di default, una card per riga */
+  gap: 1rem;
+}
+.project-title {
+  font-size: 56px;
+  font-weight: 400;
+  margin-bottom: 35px;
+}
+
+/* Affianca 2 card a partire da 1200px */
+@media (min-width: 1200px) {
+  .experience-cards-div {
+    grid-template-columns: repeat(2, 1fr); /* 2 card affiancate su schermi grandi */
+  }
+  .project-title {
+    font-size: 40px;
+  }
+}
+
+/* Affianca 2 card anche su schermi medi, come 768px fino a 1199px */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .experience-cards-div {
+    grid-template-columns: repeat(2, 1fr); /* 2 card anche su schermi medi */
+  }
+  .project-title {
+    font-size: 40px;
+  }
+}
+
+/* Su schermi piccoli (meno di 768px), torna a 1 card per riga */
+@media (max-width: 767px) {
+  .project-title {
+    text-align: center;
+    font-size: 30px;
+  }
+  .experience-cards-div {
+    grid-template-columns: 1fr; /* 1 card per riga su schermi piccoli */
+  }
 }
 
 .experience-heading {

@@ -109,8 +109,7 @@ export default function Projects() {
             "The LMS platform is an online learning management system designed to facilitate education by allowing educators to create, distribute, and manage courses and educational materials. Utilizing Laravel as the development framework, Blade for templating, and Tailwind CSS and Bootstrap for the user interface design.",
           url: "https://github.com/serena-esse/Capstone-Learnopia-LMS",
         },
-
-        videoUrl: "/video/learnopia.mp4", // URL video per il progetto 1
+        videoUrl: "/video/learnopia.mp4",
       },
       {
         node: {
@@ -120,8 +119,7 @@ export default function Projects() {
             "This Laravel application allows gym admins to create and manage courses with images, descriptions, and available spots. Users can browse courses and register by selecting a specific date and time, ensuring availability. The system simplifies course management and user registration for a smooth experience.",
           url: "https://github.com/serena-esse/U2-S7-L5-app-Palestra",
         },
-
-        videoUrl: "/video/FitHub.mp4", // URL video per il progetto 2
+        videoUrl: "/video/FitHub.mp4",
       },
       {
         node: {
@@ -130,8 +128,7 @@ export default function Projects() {
           description: "Descrizione del progetto 3",
           url: "https://github.com/utente/progetto3",
         },
-
-        videoUrl: "/video/progetto3.mp4", // URL video per il progetto 3
+        videoUrl: "/video/progetto3.mp4",
       },
       {
         node: {
@@ -140,8 +137,7 @@ export default function Projects() {
           description: "Descrizione del progetto 4",
           url: "https://github.com/utente/progetto4",
         },
-
-        videoUrl: "/video/progetto4.mp4", // URL video per il progetto 4
+        videoUrl: "/video/progetto4.mp4",
       },
     ];
 
@@ -153,15 +149,18 @@ export default function Projects() {
       <Suspense fallback={renderLoader()}>
         <div className="main" id="opensource">
           <h1 className="project-title">Open Source Projects</h1>
-          <div className="repo-cards-div-main">
-            {repo.map((v) => (
-              <GithubRepoCard
-                repo={v}
-                key={v.node.id}
-                isDark={isDark}
-                videoUrl={v.videoUrl} // Passa l'URL video manualmente
-              />
-            ))}
+          <div className="container">
+            <div className="row">
+              {repo.map((v) => (
+                <div className="col-lg-6 col-md-6 col-sm-12 mb-4" key={v.node.id}>
+                  <GithubRepoCard
+                    repo={v}
+                    isDark={isDark}
+                    videoUrl={v.videoUrl} // Passa l'URL video manualmente
+                  />
+                </div>
+              ))}
+            </div>
           </div>
           <Button text={"More Projects"} className="project-button" href={socialMediaLinks.github} newTab={true} />
         </div>
